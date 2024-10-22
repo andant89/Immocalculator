@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Immobilier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculateur Immobilier</h1>
+    <form id="calculateur">
+        <!-- Appartement -->
+        <label for="prix-appartement">Prix d'achat de l'appartement :</label>
+        <input type="number" id="prix-appartement" name="prix-appartement" required>
+
+        <!-- Parking -->
+        <label for="prix-parking">Prix d'achat du parking :</label>
+        <input type="number" id="prix-parking" name="prix-parking" required>
+
+        <!-- Total (Calculé automatiquement) -->
+        <label for="total-bien">Total (Appartement + Parking) :</label>
+        <input type="number" id="total-bien" name="total-bien" readonly>
+
+        <!-- Fond propre + % -->
+        <div class="input-group">
+            <label for="fond-propre">Fond propre :</label>
+            <input type="number" id="fond-propre" name="fond-propre" required>
+            <input type="text" id="pourcentage-fond-propre" name="pourcentage-fond-propre" readonly style="width: 60px;" placeholder="%">
+        </div>
+
+        <!-- Montant du prêt bancaire + % -->
+        <div class="input-group">
+            <label for="montant-pret">Montant du prêt bancaire :</label>
+            <input type="number" id="montant-pret" name="montant-pret" readonly>
+            <input type="text" id="pourcentage-pret" name="pourcentage-pret" readonly style="width: 60px;" placeholder="%">
+        </div>
+
+        <!-- Nouveau : Appartement visé -->
+        <label for="prix-appartement-vise">Prix de l'appartement visé :</label>
+        <input type="number" id="prix-appartement-vise" name="prix-appartement-vise" required>
+
+        <!-- Nouveau : Parking visé -->
+        <label for="prix-parking-vise">Prix des places de parking visées :</label>
+        <input type="number" id="prix-parking-vise" name="prix-parking-vise" required>
+
+        <!-- Frais de notaire (Calculé automatiquement à 3.5%) -->
+        <label for="frais-notaire">Frais de notaire (3.5%) :</label>
+        <input type="number" id="frais-notaire" name="frais-notaire" readonly>
+
+        <!-- Nouveau : Total (Appartement + Parking + Frais de notaire) -->
+        <label for="total-final">Total (Appartement + Parking + Frais de notaire) :</label>
+        <input type="number" id="total-final" name="total-final" readonly>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
