@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul d'achat immobilier</title>
+    <link rel="stylesheet" href="pas-de-bien.css">
+</head>
+<body>
+    <h1>Calcul de l'achat d'un bien immobilier</h1>
+
+    <p>Remplissez les informations suivantes pour estimer les coûts liés à l'achat de votre bien.</p>
+
+    <form id="achat-form">
+        <div class="form-group">
+            <label for="prix-bien">Prix du bien immobilier (€):</label>
+            <input type="number" id="prix-bien" name="prix-bien" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fonds-propres">Fonds propres disponibles (€):</label>
+            <input type="number" id="fonds-propres" name="fonds-propres" required>
+        </div>
+
+        <div class="form-group">
+            <label for="canton">Sélectionnez votre canton :</label>
+            <select id="canton" name="canton" required>
+                <option value="vaud">Vaud</option>
+                <option value="geneve">Genève</option>
+                <option value="fribourg">Fribourg</option>
+                <option value="valais">Valais</option>
+                <option value="neuchatel">Neuchâtel</option>
+                <option value="jura">Jura</option>
+            </select>
+        </div>
+
+        <button type="button" id="calculer">Calculer</button>
+    </form>
+
+    <div id="resultat" style="margin-top: 20px;">
+        <!-- Les résultats s'afficheront ici -->
+    </div>
+
+    <script src="pas-de-bien.js"></script>
+</body>
+</html>
